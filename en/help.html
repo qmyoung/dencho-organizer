@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help - Dencho Organizer</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="site-header">
+<p class="app-name">Dencho Organizer</p>
+<nav class="main-nav" aria-label="Dencho Organizer"><a href="index.html">Home</a><a href="help.html" aria-current="page">Help</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
+</header>
+<main>
+<h1>Help</h1>
+<nav class="toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#start">Getting started</a></li><li><a href="#collect">Collecting files</a></li><li><a href="#review">Reviewing and archiving</a></li><li><a href="#naming">Naming rules and folder layout</a></li><li><a href="#auto">Automatic archiving</a></li><li><a href="#archive">Archived records: search, correct, delete</a></li><li><a href="#export">Index book, processing rules and yearly export</a></li><li><a href="#plan">Free allowance and subscription</a></li><li><a href="#settings">Resident mode, menu bar and settings</a></li><li><a href="#move">Changing Macs and long-term retention</a></li><li><a href="#menu">Help menu</a></li></ol></nav>
+<p class="lead">This page explains every feature of Dencho Organizer in the order you would use it. Anything about law or tax is for reference only. Please confirm it with your tax accountant.</p>
+
+<section id="start"><h2>Getting started</h2>
+<p>What the app does: it reads the transaction date, amount, currency, vendor and registration number (T plus 13 digits) from a receipt or invoice, you confirm them, the app renames the file by your naming rules and files it by year and month, then it builds an index book (CSV) and a processing-rules template you can hand to your tax accountant. The interface is available in Japanese, Chinese and English and follows your system language.</p>
+<p>The app organizes electronic-transaction data only (PDF, images, Word, Excel, OFD and similar files). A photographed paper receipt does not meet the scanner-storage requirements (sukyana hozon), so keep the paper original separately. <span class="tax">For reference only. Please confirm with a licensed tax accountant (zeirishi).</span></p>
+<p>The first time you open the app, a four-step guide appears.</p>
+<ol>
+<li>Welcome: what the app does, and that it organizes electronic transactions only.</li>
+<li>Archive folder: create or choose the folder where confirmed files are filed. If you changed Macs, choose "Open an existing archive". To decide later, choose "Set Up Later" and set it in Settings &gt; Archive.</li>
+<li>Optional settings: a watched folder (can be skipped) and launch at login.</li>
+<li>On-device AI and free allowance: whether on-device AI is available, and that the first 30 items are free and later ones need a subscription. "Get Started" opens the main window.</li>
+</ol>
+<p>To see the guide again, choose Help &gt; Show Welcome Guide in the menu bar. Closing it partway changes none of your existing settings.</p>
+<p>The main window has four sections on the left: <strong>To Review</strong>, <strong>Archive</strong>, <strong>Export</strong> and <strong>Naming Rules</strong>. Settings open with ⌘,.</p>
+</section>
+
+<section id="collect"><h2>Collecting files</h2>
+<p>Supported formats: PDF, JPEG, PNG, HEIC, Word, Excel and OFD. Collected files first go to "To Review"; they are not archived directly (automatic archiving is described below).</p>
+<ul>
+<li><strong>Drop onto the main window</strong>: drag files or a folder onto the box at the bottom left. For a folder, the supported files inside are added and the numbers added and skipped are shown.</li>
+<li><strong>Quick collection panel</strong>: press the shortcut (changeable in Settings &gt; Collect) from any app to call up the panel, then drop Finder files or mail attachments onto it. No Accessibility permission is needed. The panel shows today's count and the number waiting for review, and "Review in Main Window…" takes you to them.</li>
+<li><strong>Collection badge</strong>: while the main window is closed, a small icon sits on the desktop. Drop files on it and it expands to collect them. You can adjust its opacity and how soon it collapses, or turn it off. It hides itself while the main window is open.</li>
+<li><strong>Watched folders</strong>: add a folder such as Downloads in Settings &gt; Collect, and new files that appear there are sent to To Review automatically (only files that appear after you add the folder, and only while the app is running). You cannot watch the archive folder itself or any folder above or inside it, because that would pull archived receipts back in. If a disk or network drive is not connected, the folder shows "Not connected", is rechecked every 60 seconds, and resumes by itself when it returns.</li>
+</ul>
+<p>Unsupported formats, web links and files that are not local are not added, and the app tells you so.</p>
+</section>
+
+<section id="review"><h2>Reviewing and archiving</h2>
+<p>Select a file in To Review to see its preview and the values the app read.</p>
+<ul>
+<li><strong>Fields</strong>: transaction date, amount, currency, vendor, registration number (optional) and kind (Electronic or Paper (Photo)). A pale background means medium confidence and a brown background means low confidence, so check those values. You cannot confirm while a required field is empty.</li>
+<li><strong>Recognition mode</strong>: when Apple Intelligence is available on your Mac the app uses "AI + Rules"; otherwise it reads by layout rules alone, which is less accurate, so check the values carefully. Recognition runs entirely on your Mac and never uses the network. The AI needs macOS 26 or later.</li>
+<li><strong>Vendor correction memory</strong>: when you change a vendor name during review, the app remembers it and corrects the same vendor automatically next time. The memory lives in the .receipt-mac folder inside your archive folder and can be cleared in Settings &gt; Recognition. Archived records are not affected.</li>
+<li><strong>Rule and file name</strong>: the file name appears as "Will be saved as". If a variable the rule needs cannot be read, the default rule is used instead; fill it in below to switch back to the original rule.</li>
+<li><strong>Original file handling</strong>: "Copy" leaves the original where it is. "Move" verifies the copy first, then moves the original to the Trash. The default is set in Settings &gt; Archive and can be switched each time on the review screen.</li>
+<li><strong>Buttons</strong>: "Confirm &amp; Archive"; "Skip" to look at the next file first; "Remove from To Review", which only removes it from the list and does not delete the original file.</li>
+</ul>
+<p>A file with exactly the same content cannot be archived twice. To fix a wrong value, correct the record in the archive list; to archive it again, delete the old record in the archive list first.</p>
+<p>Status labels in the list: Recognizing, To Review, Duplicate and Can't read.</p>
+</section>
+
+<section id="naming"><h2>Naming rules and folder layout</h2>
+<p>Use "Naming Rules" on the left to decide how files are named. The default rule must contain date, amount and vendor, and is always evaluated last. The default rule alone is enough for most people.</p>
+<ul>
+<li><strong>Add Rule</strong>: only needed if you want different names by vendor, currency and so on. A rule reads "if all (or any) of these conditions hold, name it …". Conditions can use document content, original file name, currency, registration number or a variable, with operators such as contains, starts with, between and matches regex. Rules are checked from top to bottom and the first match is used; drag to reorder.</li>
+<li><strong>Template blocks</strong>: document fields (date, amount, currency, vendor), variables, fixed text and separators. Click to append, drag to reorder. Amounts can use thousands separators, a decimal-place setting and a rounding mode.</li>
+<li><strong>Custom variables</strong>: take a value from the document content or the original file name, for example the number after a keyword, a leading number, or a lookup table. If it cannot be read you can type it in.</li>
+<li><strong>Preview</strong>: while editing a rule, pick sample files to see which rule matches and what file name results. Preview reads on your Mac and does not add anything to To Review or the ledger.</li>
+<li><strong>Folder layout</strong>: in Settings &gt; Archive choose the folder levels inside the archive folder (a combination and order of year, month and vendor). Each rule can also use its own layout. This affects only files archived afterwards; files already archived stay where they are.</li>
+</ul>
+</section>
+
+<section id="auto"><h2>Automatic archiving</h2>
+<p>It is off by default and is set per rule. Open the rule in "Naming Rules" (the default rule too), turn on "Archive automatically without review" at the bottom of the page, and choose a confidence level (High, or Medium or higher). When a file matches that rule, did not fall back to the default rule, is a PDF with a text layer (a scanned PDF does not qualify) and a readable currency, and date, amount and vendor all reach the chosen level, it is archived without waiting in To Review. Anything else still goes to To Review. Automatically archived records carry an "Auto" tag, and the archive list can be filtered to "Auto-archived only". Whether archiving without human confirmation meets the Electronic Books Maintenance Act requirements is a separate question. <span class="tax">For reference only. Please confirm with a licensed tax accountant (zeirishi).</span></p>
+</section>
+
+<section id="archive"><h2>Archived records: search, correct, delete</h2>
+<ul>
+<li><strong>Browse and search</strong>: the sidebar groups records by year and month, and you can view "All". Filter by vendor, date, amount range and currency.</li>
+<li><strong>Correct</strong>: "Correct…" edits the fields. A reason is required, and the values before and after are kept in the history. The corrected file name keeps using the naming rule from registration. If the file no longer matches what was registered, the correction is refused and neither the file nor the ledger is changed.</li>
+<li><strong>Delete</strong>: the file is not physically deleted; it is moved to a deleted-items area and kept. The record and the reason stay in the history.</li>
+<li><strong>History</strong>: each record shows its register, correct, delete (and conflict) history. The ledger is append-only and never rewrites earlier entries.</li>
+<li><strong>Unregistered files</strong>: files placed directly in the archive folder that are not registered are listed, and you can "Add to To Review" (after review they are renamed, moved and registered) or "Ignore" them.</li>
+<li><strong>Items that need attention</strong>: a notice bar above the archive can show interrupted operations, missing files, ledger lines that cannot be read, items awaiting a decision, duplicate registrations, correction conflicts and index-book update failures. Use "Repair", "Resolve" or "Retry". If a file is missing, restore it from your own backup. When several Macs share one archive, each Mac writes its own ledger and the app shows them merged; for a file registered twice you choose which record to keep, and for conflicting corrections the later one is used.</li>
+</ul>
+</section>
+
+<section id="export"><h2>Index book, processing rules and yearly export</h2>
+<p>The index book (CSV) is updated by year along with the archive and lists search items such as transaction date, amount and vendor. If it cannot be updated, the app tells you and you can choose "Retry". <span class="tax">For reference only. Please confirm with a licensed tax accountant (zeirishi).</span></p>
+<p>On the Export page you can:</p>
+<ul>
+<li><strong>Generate the processing rules (jimu shori kitei)</strong>: enter the business name (trade name or personal name), type (corporation or sole proprietor), responsible person and establishment date, then choose "Generate Regulation" to create a template saved in the archive folder; you can reveal it in Finder. It is a template: review the contents with your tax accountant before use. <span class="tax">For reference only. Please confirm with a licensed tax accountant (zeirishi).</span></li>
+<li><strong>Export a yearly ZIP</strong>: bundles that year's archived files, the index book CSV and the processing rules so you can hand them to your tax accountant. If the archive folder has no processing rules yet, the ZIP does not include them.</li>
+</ul>
+<p>The menu command "Export for Tax Accountant…" opens the same page. <span class="tax">For reference only. Please confirm with a licensed tax accountant (zeirishi).</span></p>
+</section>
+
+<section id="plan"><h2>Free allowance and subscription</h2>
+<ul>
+<li>The first 30 archived items are free. The count used is the larger of the on-device counter and the number of items ever registered in the current archive folder (including ones deleted later), so deleting records or switching archive folders does not lower it.</li>
+<li>After the free allowance is used up, <strong>archiving new items</strong> needs a yearly or monthly subscription. The archive button on the review screen becomes "Subscribe to Continue", and automatic archiving does not run (the file stays in To Review).</li>
+<li><strong>Archived data always stays available</strong>: collecting, recognition, editing the review form, viewing, search, correction, deletion, yearly export, the index book and the processing rules are not limited by the allowance. When a subscription lapses, your data is not locked.</li>
+<li>Prices and periods appear on the in-app subscription screen and follow the localized price shown by the App Store. The subscription renews automatically; purchase and billing are handled by Apple. You can choose "Restore Purchases" in Settings &gt; Subscription (and "Manage Subscription" while you are subscribed), and cancel in your App Store account settings.</li>
+</ul>
+</section>
+
+<section id="settings"><h2>Resident mode, menu bar and settings</h2>
+<ul>
+<li><strong>Settings</strong> (⌘,) has five tabs: General, Archive, Recognition, Collect and Subscription. General holds resident mode and settings export and import; Archive holds the archive folder, the default for handling originals, the folder layout and a shortcut to Naming Rules; Recognition holds the recognition mode, Apple Intelligence status and correction memory; Collect holds the shortcut, collection badge and watched folders; Subscription shows your current status (free items used, yearly or monthly plan with its expiry date, or expired) and lets you subscribe, restore purchases and, while subscribed, manage the subscription.</li>
+<li><strong>Resident mode</strong> (Settings &gt; General): launch at login, show the menu bar icon, and hide the Dock icon after the main window closes. The menu bar icon lets you open the main window, show or hide the collection badge, export, open settings and quit, and it warns you when a network drive is disconnected.</li>
+<li><strong>Settings export and import</strong> (Settings &gt; General): saves naming rules, custom variables, folder layout and amount format in one file you can take to another Mac. It does not include the archive folder location, window state or launch at login. Importing overwrites your current settings and cannot be undone.</li>
+</ul>
+</section>
+
+<section id="move"><h2>Changing Macs and long-term retention</h2>
+<p>The Electronic Books Maintenance Act expects records to be kept for the statutory retention period, with tamper-prevention measures maintained throughout. When you change Macs, make sure the archive folder and the ledger inside it are carried over intact. <span class="tax">For reference only. Please confirm with a licensed tax accountant (zeirishi).</span></p>
+<ol>
+<li>Copy the whole archive folder as-is from the old Mac to the new one (or sync it through your own cloud storage). The hidden <code>.receipt-mac</code> folder inside holds the ledger and correction memory, so be sure to bring it along.</li>
+<li>Install the app on the new Mac, then choose "Open an existing archive" in the archive-folder step of the welcome guide, or choose that folder in Settings &gt; Archive. The app shows the number of archived items, the last archive date and the number of Macs that have written to it; check them and choose "Use This Archive". If the ledger or memory has not finished downloading from the cloud, the app says it cannot read it yet; wait for the sync to finish.</li>
+<li>For settings such as naming rules, export them from Settings &gt; General on the old Mac and import them on the new one.</li>
+</ol>
+<p>The ledger is append-only, and every correction and deletion needs a reason and leaves a history. The app does not back up your receipt files, though: back up the whole archive folder yourself, and keep the old Mac's data until you have confirmed the new Mac's data is complete. For the exact requirements during the retention period, confirm with your tax accountant. <span class="tax">For reference only. Please confirm with a licensed tax accountant (zeirishi).</span></p>
+</section>
+
+<section id="menu"><h2>Help menu</h2>
+<p>The Help menu in the menu bar has Help, Support, Privacy Policy and Terms of Use (each opens the matching page of this site in your default browser, in the app's display language) and "Show Welcome Guide". The About panel shows the version and copyright.</p>
+</section>
+</main>
+<footer class="site-footer">
+<p>Tax and legal information is for reference only. Please confirm with a licensed tax accountant (zeirishi).</p>
+<p class="lang-switch">Language: <a href="../ja/help.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/help.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <span aria-current="true">English</span></p>
+<p>© 2026 Qingmeng Yang</p>
+</footer>
+</body>
+</html>
